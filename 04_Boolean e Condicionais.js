@@ -118,4 +118,113 @@ X !== '10' // true - comparando o valor e o tipo
 X != 5 // true - comparando o valor 
 
 
+// OPERADORES LÓGICOS && - Retorna o ultimo valor verdadeiro ou o primeiro valor falso que ele encontrar
+// && Compara se uma expressão e a outra é verdadeira
+// O resultado só será true se ambas as expressões forem verdadeiras, caso contrário será false
+// O Primeiro valor falso que ele encontra ele retorna e não continua avaliando o restante
 
+true && true; // true - 
+true && false; // false
+false && true; // false
+'Gato' && 'Cão'; // 'Cão' - Gato é verdadeiro e cão também, então ele retorna o último valor
+(5 - 5) && (5 + 5); // 0 - O primeiro valor falso que ele encontra é 0, então ele retorna 0 
+'Gato' && false; // false
+(5 >= 5) && (3 < 6); // true - comparando valores por isso retorna boleano
+
+
+// OPERADORES LÓGICOS (ou) || - Retorna o primeiro valor verdadeiro ou o último valor falso que ele encontrar
+// || Compara se uma expressão ou a outra é verdadeira
+// O resultado só será false se ambas as expressões forem falsas, caso contrário será true
+// O Primeiro valor verdadeiro que ele encontra ele retorna e não continua avaliando o restante
+
+true || true; // true
+true || false; // true
+false || true; // true
+'Gato' || 'Cão'; // 'Gato'
+(5 - 5) || (5 + 5); // 10
+'Gato' || false; // Gato
+(5 >= 5) || (3 < 6); // true
+
+var condicional2 = (5 - 5) || (5 + 5) && (10 - 2);// Ele retorna 8, pois o && retorna o ultimo valor verdadeiro 
+
+// SWITCH - Caso seja... pode se verificar ou fazer acontecer uma ação conforme uma condição
+// break - Para parar a execução do código, caso não tenha o break ele continua executando o código mesmo que não seja a condição verdadeira
+
+var corFavorita = 'Azul';
+
+switch (corFavorita) {
+    case 'Azul':
+        console.log('Olhe para o céu.');
+        break;
+    case 'Vermelho':
+        console.log('Olhe para rosas.');
+        break;
+    case 'Amarelo':
+        console.log('Olhe para o sol.');
+        break;
+    default:
+        console.log('Feche os olhos');
+}
+
+// EXERCICIOS
+
+// Verifique se a sua idade é maior do que a de algum parente
+// Dependendo do resultado coloque no console 'É maior', 'É igual' ou 'É menor'
+
+var minhaIdade = 32;
+var idadeParente = 50;
+
+if (minhaIdade > idadeParente) {
+    console.log("É maior");
+} else if (minhaIdade === idadeParente) {
+    console.log("É igual");
+} else {
+    console.log("É menor");
+}
+
+// É menor
+
+
+// Qual valor é retornado na seguinte expressão?
+var expressao = (5 - 2) && (5 - ' ') && (5 - 2); // 3 
+//                  3         5            3 
+
+
+// Verifique se as seguintes variáveis são Truthy ou Falsy
+var nome = 'Andre'; // true
+var idade = 28; // true
+var possuiDoutorado = false; // false
+var empregoFuturo; // false
+var dinheiroNaConta = 0; // false
+
+console.log(!!nome, !!idade, !!possuiDoutorado, !!empregoFuturo, !!dinheiroNaConta); // true true false false false
+
+// Compare o total de habitantes do Brasil com China (valor em milhões)
+var brasil = 207;
+var china = 1340;
+
+if (brasil > china) {
+    console.log("Brasil tem mais habitantes que a China");
+} else {
+    console.log("Brasil tem menos habitantes que a China");
+}
+
+// Brasil tem menos habitantes que a China
+
+
+
+// O que irá aparecer no console?
+if (('Gato' === 'gato') && (5 > 2)) {
+    console.log('Verdadeiro');
+} else {
+    console.log('Falso');
+} // falso
+
+// O que irá aparecer no console?
+if (('Gato' === 'gato') || (5 > 2)) { // falso || true
+    console.log('Gato' && 'Cão');
+} else {
+    console.log('Falso');
+}
+
+// Cão
