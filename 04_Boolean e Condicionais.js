@@ -108,6 +108,7 @@ X === '10' // false - comparando o valor e o tipo
 // se comparar uma String ela e ela for igual porem começar com maiusculo ou minusculo, o resultado será false
 // Exemplo: 'andre' === 'Andre' // false - comparando o valor e o tipo
 // Exemplo: 'andre' == 'Andre' // true - comparando o valor, mas não o tipo 
+// Exemplo: 'andre' === 'andre' // true - comparando o valor e o tipo
 
 //diferente
 X != 10 // false - comparando o valor
@@ -115,5 +116,6 @@ X !== 10 // false - comparando o valor e o tipo
 X != '10' // false - comparando o valor, mas não o tipo
 X !== '10' // true - comparando o valor e o tipo
 X != 5 // true - comparando o valor 
+
 
 
