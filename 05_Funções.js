@@ -177,3 +177,112 @@ function imc(peso, altura) {
 }
 
 // o JS move a função para o topo do código, mas não move as variáveis
+// o JS move todas as variáveis para o topo do código, e as funções e depois executa o código   
+
+// EXERCICIO
+
+// Crie uma função para verificar se um valor é Truthy
+
+function verificarValor(valor) {
+    return !!valor; // !! transforma o valor em booleano
+
+}
+
+console.log(verificarValor(0)); // false
+console.log(verificarValor(1)); // true
+console.log(verificarValor("")); // false
+console.log(verificarValor("Alisson")); // true
+console.log(verificarValor(null)); // false
+
+// Crie uma função matemática que retorne o perímetro de um quadrado
+// lembrando: perímetro é a soma dos quatro lados do quadrado
+
+function perimetroQuadrado(lado) {
+    return lado * 4; // ou lado + lado + lado + lado
+}
+
+console.log(perimetroQuadrado(3)); // 12    
+
+
+// Crie uma função que retorne o seu nome completo
+// ela deve possuir os parâmetros: nome e sobrenome
+
+function nomeCompleto(nome, sobrenome) {
+    return `${nome} ${sobrenome}`; // template string, o mesmo que nome + " " + sobrenome
+}
+
+console.log(nomeCompleto("Alisson", "Lincoln")); // Alisson Lincoln
+
+//!! jeito errado:
+
+function nomeCompleto(nome, sobrenome) {
+    nome = "Alisson";
+    sobrenome = "Lincoln";
+    return `${nome} ${sobrenome}`;
+} //A função tem parâmetros, mas você está sobrescrevendo eles com valores fixos dentro da função. Isso torna os parâmetros inúteis.
+
+
+// Crie uma função que verifica se um número é par
+
+function verificarNumeroPar(numero) {
+    if (numero % 2 !== 0) {
+        return "o número é impar";
+    } else {
+        return "o número é par";
+    }
+}
+
+console.log(verificarNumeroPar(10)); // o número é par
+console.log(verificarNumeroPar(11)); // o número é impar
+
+
+// Crie uma função que retorne o tipo de
+// dado do argumento passado nela (typeof)
+
+function tipoDeDado(dado) {
+    return typeof dado; // typeof retorna o tipo de dado
+}
+
+console.log(tipoDeDado(10)); // number
+console.log(tipoDeDado("10")); // string
+console.log(tipoDeDado(true)); // boolean
+console.log(tipoDeDado([1, 2, 3])); // object
+
+// addEventListener é uma função nativa do JavaScript
+// o primeiro parâmetro é o evento que ocorre e o segundo o Callback
+// utilize essa função para mostrar no console o seu nome completo
+// quando o evento 'scroll' ocorrer.
+
+addEventListener("click", function () {
+    var nomeCompleto = "Alisson Lincoln";
+    return nomeCompleto; // ou console.log(nomeCompleto);
+})
+
+// Corrija o erro abaixo
+function precisoVisitar(paisesVisitados) {
+    var totalPaises = 193;
+    return `Ainda faltam ${totalPaises - paisesVisitados} países para visitar`;
+}
+function jaVisitei(paisesVisitados) {
+    return `Já visitei ${paisesVisitados} do total de ${totalPaises} países`;
+}
+precisoVisitar(20);
+jaVisitei(20);
+
+// corrigido 
+
+var totalPaises = 193;
+
+function precisoVisitar(paisesVisitados) {
+
+    return `Ainda faltam ${totalPaises - paisesVisitados} países para visitar`;
+}
+function jaVisitei(paisesVisitados) {
+    return `Já visitei ${paisesVisitados} do total de ${totalPaises} países`;
+}
+precisoVisitar(20);
+jaVisitei(20);
+
+// São duas funções separadas onde nao consegue usar a variavel da outra função
+// a variavel totalPaises foi criada fora das funções, assim ela pode ser acessada por ambas as funções
+// e o valor dela pode ser alterado dentro de cada função, se necessário
