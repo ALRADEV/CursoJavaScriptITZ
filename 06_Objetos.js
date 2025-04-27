@@ -196,3 +196,10 @@ var cachorro = {
         }
     }
 }
+
+console.log(cachorro.lateQuandoVê("homem")); // Au Au!
+console.log(cachorro.lateQuandoVê("mulher")); // Silêncio!
+
+//---------------------------------------------------------------------------
+
+
