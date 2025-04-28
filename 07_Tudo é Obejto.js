@@ -9,6 +9,11 @@ nome.charAt(1); // 'n'
 nome.replace('ré', 'rei'); // 'Andrei'
 nome; // 'André'
 
+
+var nome = "Alisson";
+
+nome.replace("Alisson", "André");
+
 // O nome é uma string, e possui propriedades e métodos. Por isso é um objeto.
 // Uma string herda propriedades e métodos do construtor String()
 
@@ -60,12 +65,26 @@ btn.addEventListener('click', function () {
 
 var nome = "Alisson";
 
-nome.
+nome.length; // 7 - RETORNA O TAMANHO DA STRING
+nome.charAt(1); // 'l' - RETORNA O CARACTERE NA POSIÇÃO 1
+nome.slice(0, 3); // 'Ali' - RETORNA A STRING DO ÍNDICE 0 ATÉ O ÍNDICE 3 (NÃO INCLUSO)
 
 // nomeie 5 propriedades ou métodos de elementos do DOM
 
 var btn = document.querySelector('.btn'); // seleciona o elemento HTML com a classe btn
 
+btn.addEventListener
+btn.classList
+btn.innerText
+btn.innerHTML
+btn.style
 
 // busque na web um objeto (método) capaz de interagir com o clipboard,
 // clipboard é a parte do seu computador que lida com o CTRL + C e CTRL + V
+
+
+//antes
+document.execCommand('copy'); // Copia o texto selecionado para a área de transferência (clipboard)
+
+//depois
+navigator.clipboard.writeText('Texto a ser copiado'); // Copia o texto para a área de transferência (clipboard)
