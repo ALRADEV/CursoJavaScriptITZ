@@ -69,6 +69,7 @@ if (possuiFaculdade) {
 var scroll = 1000;
 
 scroll += 500; // 1500
+console.log(scroll) // 1500
 
 
 // Atribua true para a variável darCredito,
@@ -78,5 +79,6 @@ var possuiCarro = true;
 var possuiCasa = true;
 var darCredito;
 
-var darCerto = (possuiCarro && possuiCasa) ? true : false; // true
-console.log(darCerto) // true   
+var darCredito = (possuiCarro && possuiCasa); // true
+
+console.log(darCredito) // true   
