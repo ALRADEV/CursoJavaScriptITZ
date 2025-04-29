@@ -45,7 +45,54 @@ const h1Selecionado = document.querySelector("h1"); // criando variavel para peg
 
 h1Selecionado.// seleciona as propriedade e metodos
 
-    document.body // retorna o body do html
+const h1Classes = h1Selecionado.classList// etc
+
+document.body // retorna o body do html
 
 //-------------------------------------------------------------------------
+
+//NODE .Toda tag html é representada pelo objeto 
+// Element e por isso herda os seus métodos e propriedades. Element é um tipo de objeto Node.
+
+Element // objeto 
+
+const titulo = document.querySelector('h1');
+
+titulo.innerText; // retorna o texto;
+titulo.classList; // retorna as classes;
+titulo.id; // retorna o id;
+titulo.offsetHeight; // retorna a altura do elemento;
+
+titulo.addEventListener('click', callback);
+// ativa a função callback ao click no titulo
+
+function callbackh1() {
+    console.log("Clicou em ", h1Selecionado.innerText);
+}
+
+h1Selecionado.addEventListener("click", callbackh1)
+
+//------------------------------------------------------
+
+// Retorne o url da página atual utilizando o objeto window
+
+const UrlPaginaAtual = window.location.href;
+console.log(UrlPaginaAtual);
+
+// Seleciona o primeiro elemento da página que
+// possua a classe ativo
+
+const pimeiroElemento = document.querySelector(".btn")// seleciona o primeiro elemento
+
+// Retorne a linguagem do navegador
+
+const linguagemNavegador = window.navigator.language;
+console.log(linguagemNavegador);
+
+
+// Retorne a largura da janela 
+
+const larguraJanela = window.innerWidth;
+console.log(larguraJanela)
+
 
